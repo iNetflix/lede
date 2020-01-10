@@ -74,10 +74,12 @@ jobs:
           git clone https://github.com/tzxiaozhen88/luci-app-koolproxyR.git
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/rosywrt/luci-theme-rosy
+          
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          
       - name: Costom configure file
         run: |
           rm -f ./.config*
